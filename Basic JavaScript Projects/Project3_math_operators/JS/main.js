@@ -29,5 +29,10 @@ function comboNums() { //This function returns the solution to this combined ope
     document.getElementById("Math5").innerHTML = "5 multiplied by 7, plus 9, divided by 4, subtracted by 8 equals " + solution;
 }
 
+function remNums() { //This function returns the remainder for the division question as a string
+    var remainder = 29 % 7;
+    document.getElementById("Math6").innerHTML = "When you divide 29 by 7, the remainder is " + remainder;
+}
+
 //This is the script where my statements are executed
 window.alert(A); 
