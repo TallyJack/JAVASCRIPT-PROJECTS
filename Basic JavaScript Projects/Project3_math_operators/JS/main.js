@@ -14,5 +14,15 @@ function subNums() { //This function returns the solution to the subtraction que
     document.getElementById("Math2").innerHTML = "12 - 8 is " + subtraction;
 }
 
+function multNums() { //This function returns the solution to the multiplication question as a string
+    var multiplication = 5 * 5;
+    document.getElementById("Math3").innerHTML = "5 x 5 is " + multiplication;
+}
+
+function divNums() { //This function returns the solution to the division question as a string
+    var quotient = 63 / 7;
+    document.getElementById("Math4").innerHTML = "63 / 7 is " + quotient;
+}
+
 //This is the script where my statements are executed
 window.alert(A); 
