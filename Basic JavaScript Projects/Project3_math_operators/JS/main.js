@@ -34,5 +34,10 @@ function remNums() { //This function returns the remainder for the division ques
     document.getElementById("Math6").innerHTML = "When you divide 29 by 7, the remainder is " + remainder;
 }
 
+function negNums(x) { //This function applies the negation operator to the operand as a string
+    var negation = -x;
+    document.getElementById("Math7").innerHTML = "The negative form of " + x + " is " + negation;
+}
+
 //This is the script where my statements are executed
 window.alert(A); 
