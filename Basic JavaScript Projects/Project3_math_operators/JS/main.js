@@ -24,5 +24,10 @@ function divNums() { //This function returns the solution to the division questi
     document.getElementById("Math4").innerHTML = "63 / 7 is " + quotient;
 }
 
+function comboNums() { //This function returns the solution to this combined operation question as a string
+    var solution = (5 * 7 + 9) / 4 - 8;
+    document.getElementById("Math5").innerHTML = "5 multiplied by 7, plus 9, divided by 4, subtracted by 8 equals " + solution;
+}
+
 //This is the script where my statements are executed
 window.alert(A); 
