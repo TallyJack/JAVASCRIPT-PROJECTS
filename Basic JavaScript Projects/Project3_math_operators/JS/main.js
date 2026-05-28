@@ -49,9 +49,10 @@ function decremNums(x) {//This function decrements the given number by one.
     document.getElementById("Math9").innerHTML = "You get " + x;
 }
 
-function rndNums(x) {
-    var rando = Math.random() * x;
-    document.getElementById("Math10").innerHTML = "A random number between 0 and " + x + " is: " + rando
+function rndNums(x) { //This function returns a random integer between 0 and the given number.
+    var y = Math.random() * x;
+    var rando = Math.round(y);
+    document.getElementById("Math10").innerHTML = "A random integer between 0 and " + x + " is: " + rando
 }
 
 //This is the script where my statements are executed
