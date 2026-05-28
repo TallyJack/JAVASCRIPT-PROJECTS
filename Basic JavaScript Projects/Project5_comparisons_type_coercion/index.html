@@ -6,12 +6,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
     <title>Project 5 Functions</title>
-    <script src="JS/main.js"></script>
+    <script src="JS/main.js" defer></script>
 </head>
 
 <!--BODY-->
 <body>
-    <p id="Dictionary" onclick="hero_traits()">Click me!</p>
+    <p id="dataTypeExample">Click below to see what kind of data I am!</p>
+    <button onclick="dtReveal('dataTypeExample')" id="dataTypeAnswer">Reveal Data Type!</button>
+
+    <p id="nanEx1">This is a string, and if you click the button below, JS will attempt to find it's squareroot, producing a result of NaN.</p>
+    <button onclick="sqrtReveal('nanEx1')" id="sqrtElementAnswer">Square Root of String??</button>
+
+    <p id="nanTest1"></p>
+    <button onclick="nanReveal(nanSub1, 'nanTest1')" id="nanAnswer1">True or False?</button>
+
+    <p id="nanTest2"></p>
+    <button onclick="nanReveal(nanSub2, 'nanTest2')" id="nanAnswer1">True or False?</button>
 </body>
 
 </html>
