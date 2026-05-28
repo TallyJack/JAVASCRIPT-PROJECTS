@@ -39,5 +39,20 @@ function negNums(x) { //This function applies the negation operator to the opera
     document.getElementById("Math7").innerHTML = "The negative form of " + x + " is " + negation;
 }
 
+function incremNums(x) {//This function increments the given number by one.
+    x++;
+    document.getElementById("Math8").innerHTML = "You get " + x;
+}
+
+function decremNums(x) {//This function decrements the given number by one.
+    x--;
+    document.getElementById("Math9").innerHTML = "You get " + x;
+}
+
+function rndNums(x) {
+    var rando = Math.random() * x;
+    document.getElementById("Math10").innerHTML = "A random number between 0 and " + x + " is: " + rando
+}
+
 //This is the script where my statements are executed
 window.alert(A); 
