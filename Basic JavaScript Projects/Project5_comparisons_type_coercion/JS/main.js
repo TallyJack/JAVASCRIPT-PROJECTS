@@ -5,6 +5,8 @@ var A = "Website Reset";
 //These are variables I'm establishing for the NaN Challenges
 var nanSub1 = 42;
 var nanSub2 = "The meaning of life...";
+var posInf = 2e310
+var negInf = -3e309
 
 //This is the script where my statements are executed
 window.alert(A); 
@@ -22,6 +24,10 @@ function sqrtReveal(x) {//This function replaces an element with its squareroot
     document.getElementById(x).innerHTML = sqrtElement;
 }
 
-function nanReveal(x, y) {
+function nanReveal(x, y) {//This function determines the datatype of a value mentioned in an elemnent, and then replaces the element with the name of that datatype.
     document.getElementById(y).innerHTML = isNaN(x);
+}
+
+function limReveal(x, y) {//This function answers the question of how JS displays an extremely high or low value.
+    document.getElementById(y).innerHTML = "The value returned displays as: " + x;
 }
