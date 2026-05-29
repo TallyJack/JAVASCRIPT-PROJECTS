@@ -32,6 +32,12 @@ function limReveal(x, y) {//This function answers the question of how JS display
     document.getElementById(y).innerHTML = "The value returned displays as: " + x;
 }
 
-function BoolReveal(x) {
+function BoolReveal(x) {//This function enables buttons to reveal the boolean value of the operation they are given
     document.getElementById('BoolTest').innerHTML = "That statement is " + x + "!"
 }
+ 
+
+
+//The following console methods were simply written as instructed to execute a math operation and to return a boolean value of false 
+console.log(2+4)
+console.log(1<0)
