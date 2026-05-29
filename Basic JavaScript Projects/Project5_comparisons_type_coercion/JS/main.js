@@ -31,3 +31,7 @@ function nanReveal(x, y) {//This function determines the datatype of a value men
 function limReveal(x, y) {//This function answers the question of how JS displays an extremely high or low value.
     document.getElementById(y).innerHTML = "The value returned displays as: " + x;
 }
+
+function BoolReveal(x) {
+    document.getElementById('BoolTest').innerHTML = "That statement is " + x + "!"
+}

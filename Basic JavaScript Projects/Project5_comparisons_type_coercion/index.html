@@ -28,6 +28,13 @@
 
     <p id="lowNum">What happens when JS attempts to display an extremely <strong>LOW</strong> number value like '-3e309'?</p>
     <button onclick="limReveal(negInf, 'lowNum')" id="hiLimAnswer">Test Lower Limit</button>
+    
+    <p id="BoolTest">Click one of the following to see the Boolean value of the statement.</p>
+    <div display="flex">
+        <button onclick="BoolReveal(1>0)" id="BoolAnswer1">1 is greater than 0</button>
+        <button onclick="BoolReveal(1<0)" id="BoolAnswer2">1 is less than 0</button>
+    </div>
+    
 </body>
 
 </html>
