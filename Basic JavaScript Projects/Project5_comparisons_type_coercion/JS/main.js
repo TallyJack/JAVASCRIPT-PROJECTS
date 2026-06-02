@@ -32,10 +32,18 @@ function limReveal(x, y) {//This function answers the question of how JS display
     document.getElementById(y).innerHTML = "The value returned displays as: " + x;
 }
 
-function BoolReveal(x) {//This function enables buttons to reveal the boolean value of the operation they are given
-    const strBool = JSON.stringify(x);
+//This function enables buttons to reveal the boolean value of the operation they are given, as well as the inverse of that boolean value
+function BoolReveal(x) {
+    //The following two lines turn the boolean value into a string and so that it can then be capitalized
+    const strBool = JSON.stringify(x); 
     const capBool = strBool.charAt(0).toUpperCase() + strBool.slice(1);
-    document.getElementById('BoolTest').innerHTML = "That statement is " + capBool + "!"
+    
+    //The following two lines do the same thing to the opposite of the returned boolean value by using the NOT operator
+    const notStrBool = JSON.stringify(!x);
+    const notCapBool = notStrBool.charAt(0).toUpperCase() + notStrBool.slice(1);
+
+    //The line below replaces the element with 2 lines of text, stating the Boolean value returned by the user's selection, and the inverse of that Boolean value
+    document.getElementById('BoolTest').innerHTML = "That statement is " + capBool + "!" + E + E + "Therefore, that statement is NOT " + notCapBool + "!"
 }
  
 
