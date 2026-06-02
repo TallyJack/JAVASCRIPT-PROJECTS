@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <!--HEAD-->
+<!--HEAD-->
 
 <head>
     <meta charset="utf-8">
@@ -10,11 +10,13 @@
 </head>
 
 <!--BODY-->
+
 <body>
     <p id="dataTypeExample">Click below to see what kind of data I am!</p>
     <button onclick="dtReveal('dataTypeExample')" id="dataTypeAnswer">Reveal Data Type!</button>
 
-    <p id="nanEx1">This is a string, and if you click the button below, JS will attempt to find it's squareroot, producing a result of NaN.</p>
+    <p id="nanEx1">This is a string, and if you click the button below, JS will attempt to find it's squareroot,
+        producing a result of NaN.</p>
     <button onclick="sqrtReveal('nanEx1')" id="sqrtElementAnswer">Square Root of String??</button>
 
     <p id="nanTest1"></p>
@@ -23,13 +25,16 @@
     <p id="nanTest2"></p>
     <button onclick="nanReveal(nanSub2, 'nanTest2')" id="nanAnswer1">True or False?</button>
 
-    <p id="highNum">What happens when JS attempts to display an extremely <strong>HIGH</strong> number value like '2e310'?</p>
+    <p id="highNum">What happens when JS attempts to display an extremely <strong>HIGH</strong> number value like
+        '2e310'?</p>
     <button onclick="limReveal(posInf, 'highNum')" id="hiLimAnswer">Test Upper Limit</button>
 
-    <p id="lowNum">What happens when JS attempts to display an extremely <strong>LOW</strong> number value like '-3e309'?</p>
+    <p id="lowNum">What happens when JS attempts to display an extremely <strong>LOW</strong> number value like
+        '-3e309'?</p>
     <button onclick="limReveal(negInf, 'lowNum')" id="hiLimAnswer">Test Lower Limit</button>
-    
-    <p id="BoolTest">Click one of the following to see the Boolean value of the statement.</p>
+    <div style="display: flex; background-color: yellow; width: fit-content;">
+        <p style="font-size: large; font-weight: bold;" id="BoolTest">Click one of the following to see the Boolean value of the statement.</p>
+    </div>
     <p>---------Simple Boolean Statements---------</p>
     <div>
         <button onclick="BoolReveal(1>0)" id="BoolAnswer1">1 is greater than 0</button>
@@ -47,7 +52,16 @@
         <button onclick="BoolReveal(41===42)" id="BoolAnswer8">Integer: 41 is equal to Integer: 42</button>
     </div>
     <p>---------Boolean Statements with Logical Operators---------</p>
-     
+    <div>
+        <button onclick="BoolReveal(1<2 && 2<3)" id="BoolAnswer9">1 is less than 2 AND 2 is less than 3</button>
+        <button onclick="BoolReveal(6>5 && 4>5)" id="BoolAnswer10">6 is greater than 5 AND 4 is greater than 5</button>
+    </div>
+    <div>
+        <button onclick="BoolReveal(2>4 || 6<9)" id="BoolAnswer11">2 is greater than 4 OR 6 is less than 9</button>
+        <button onclick="BoolReveal(2>4 || 9<6)" id="BoolAnswer12">2 is greater than 4 OR 9 is less than 6</button>
+    </div>
+
+
 </body>
 
 </html>

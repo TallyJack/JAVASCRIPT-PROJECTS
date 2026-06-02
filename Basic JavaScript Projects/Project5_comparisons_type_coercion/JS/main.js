@@ -33,7 +33,9 @@ function limReveal(x, y) {//This function answers the question of how JS display
 }
 
 function BoolReveal(x) {//This function enables buttons to reveal the boolean value of the operation they are given
-    document.getElementById('BoolTest').innerHTML = "That statement is " + x + "!"
+    const strBool = JSON.stringify(x);
+    const capBool = strBool.charAt(0).toUpperCase() + strBool.slice(1);
+    document.getElementById('BoolTest').innerHTML = "That statement is " + capBool + "!"
 }
  
 
