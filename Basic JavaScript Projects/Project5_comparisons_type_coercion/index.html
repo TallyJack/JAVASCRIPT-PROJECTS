@@ -12,37 +12,46 @@
 <!--BODY-->
 
 <body>
-    <p id="dataTypeExample">Click below to see what kind of data I am!</p>
+
+    <h1>---------Data Type Statements---------</h1>
+    <p id="dataTypeExample">Click below to see what kind of data I (the text content within this paragraph element) am!</p>
     <button onclick="dtReveal('dataTypeExample')" id="dataTypeAnswer">Reveal Data Type!</button>
+
+    <p id="dataTypeExample2">CLEAR ALERT TO FINISH LOADING</p>
+    <button onclick="dtReveal2()" id="dataTypeAnswer2">Reveal Data Type!</button>
 
     <p id="nanEx1">This is a string, and if you click the button below, JS will attempt to find it's squareroot,
         producing a result of NaN.</p>
     <button onclick="sqrtReveal('nanEx1')" id="sqrtElementAnswer">Square Root of String??</button>
 
-    <p id="nanTest1"></p>
+    <h1>---------True or False Statements---------</h1>
+    <p id="nanTest1">CLEAR ALERT TO FINISH LOADING</p>
     <button onclick="nanReveal(nanSub1, 'nanTest1')" id="nanAnswer1">True or False?</button>
 
-    <p id="nanTest2"></p>
+    <p id="nanTest2">CLEAR ALERT TO FINISH LOADING</p>
     <button onclick="nanReveal(nanSub2, 'nanTest2')" id="nanAnswer1">True or False?</button>
 
+    <h1>---------Testing Limits---------</h1>
     <p id="highNum">What happens when JS attempts to display an extremely <strong>HIGH</strong> number value like
         '2e310'?</p>
     <button onclick="limReveal(posInf, 'highNum')" id="hiLimAnswer">Test Upper Limit</button>
 
     <p id="lowNum">What happens when JS attempts to display an extremely <strong>LOW</strong> number value like
         '-3e309'?</p>
-    <button onclick="limReveal(negInf, 'lowNum')" id="hiLimAnswer">Test Lower Limit</button>
+    
+        <button onclick="limReveal(negInf, 'lowNum')" id="hiLimAnswer">Test Lower Limit</button>
+    <h1>---------Boolean Seciton---------</h1>
     <div style="display: flex; background-color: yellow; width: fit-content;">
         <p style="font-size: large; font-weight: bold;" id="BoolTest">Click one of the following to see the Boolean value of the statement.</p>
     </div>
-    <p>---------Simple Boolean Statements---------</p>
+    <h3>---------Simple Boolean Statements---------</h3>
     <div>
         <button onclick="BoolReveal(1>0)" id="BoolAnswer1">1 is greater than 0</button>
         <button onclick="BoolReveal(1<0)" id="BoolAnswer2">1 is less than 0</button>
         <button onclick="BoolReveal(1==1)" id="BoolAnswer3">1 is equal to 1</button>
         <button onclick="BoolReveal(1==0)" id="BoolAnswer4">1 is equal to 0</button>
     </div>
-    <p>---------Complex Boolean Statements---------</p>
+    <h3>---------Complex Boolean Statements---------</h3>
     <div>
         <button onclick="BoolReveal(42===42)" id="BoolAnswer5">Integer: 42 is equal to Integer: 42</button>
         <button onclick="BoolReveal(41==='42')" id="BoolAnswer6">Integer: 41 is equal to String: '42'</button>
@@ -51,7 +60,7 @@
         <button onclick="BoolReveal(42==='42')" id="BoolAnswer7">Integer: 42 is equal to String: '42'</button>
         <button onclick="BoolReveal(41===42)" id="BoolAnswer8">Integer: 41 is equal to Integer: 42</button>
     </div>
-    <p>---------Boolean Statements with Logical Operators---------</p>
+    <h3>---------Boolean Statements with Logical Operators---------</h3>
     <div>
         <button onclick="BoolReveal(1<2 && 2<3)" id="BoolAnswer9">1 is less than 2 AND 2 is less than 3</button>
         <button onclick="BoolReveal(6>5 && 4>5)" id="BoolAnswer10">6 is greater than 5 AND 4 is greater than 5</button>
