@@ -32,11 +32,30 @@ function myFunction() {
     document.getElementById("Keywords_and_Constructors").innerHTML = "Erik drives a " + Erik.Vehicle_Color + "-colored " + Erik.Vehicle_Model + " manufactured in " + Erik.Vehicle_Year;
 }
 
-//The following "new" keyword was written as per Step 135
+//The following "new" keyword and function were written as per Step 135
 var Sawyer = new Vehicle("Toyota", "Prius", 1997, "Hot Pink");
 
 function myFunction2() {
     document.getElementById("New_and_This").innerHTML = "Sawyer drives a " + Sawyer.Vehicle_Color + "-colored " + Sawyer.Vehicle_Model + " manufactured by " + Sawyer.Vehicle_Make + " in " + Sawyer.Vehicle_Year;
+}
+
+//The following was written to make nested functions
+
+var begbase = 1;
+const SquareArray = [begbase];
+
+function countBySquares(){
+    document.getElementById("Nested_Function").innerHTML = SquareArray;
+    function cbs2a(){
+        function cbs2b (){
+            begbase += 1;
+        }
+        cbs2b();
+        return begbase;
+    }
+    const currVal = cbs2a();
+    const nexsqre = (currVal)**2;
+    SquareArray.push(nexsqre);
 }
 
 //This is the script where my statements are executed
