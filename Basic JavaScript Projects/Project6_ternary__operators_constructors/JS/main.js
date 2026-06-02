@@ -17,6 +17,27 @@ function Vote_Function() {
     document.getElementById("Vote").innerHTML = Can_vote + " vote.";
 }
 
+function Vehicle (Make, Model, Year, Color) {
+    this.Vehicle_Make = Make;
+    this.Vehicle_Model = Model;
+    this.Vehicle_Year = Year;
+    this.Vehicle_Color = Color;
+}
+
+var Jack = new Vehicle("Dodge", "Viper", 2020, "Red");
+var Emily = new Vehicle("Jeep", "Trail Hawk", 2019, "White and Black");
+var Erik = new Vehicle("Ford", "Pinto", 1971, "Mustard");
+
+function myFunction() {
+    document.getElementById("Keywords_and_Constructors").innerHTML = "Erik drives a " + Erik.Vehicle_Color + "-colored " + Erik.Vehicle_Model + " manufactured in " + Erik.Vehicle_Year;
+}
+
+//The following "new" keyword was written as per Step 135
+var Sawyer = new Vehicle("Toyota", "Prius", 1997, "Hot Pink");
+
+function myFunction2() {
+    document.getElementById("New_and_This").innerHTML = "Sawyer drives a " + Sawyer.Vehicle_Color + "-colored " + Sawyer.Vehicle_Model + " manufactured by " + Sawyer.Vehicle_Make + " in " + Sawyer.Vehicle_Year;
+}
 
 //This is the script where my statements are executed
 window.alert(A); 
