@@ -29,5 +29,28 @@ function globVloc4() {
     document.getElementById("gvlAnswer4").innerHTML = GlobalX + LocalY
 }
 
+//The following function(s) use the Date().getHours() method to showcase conditional statements
+
+function amVpm() {
+    if (new Date().getHours() < 12) {
+        document.getElementById("b4ORafter").innerHTML = "It is BEFORE noon.";
+    }
+    else {
+        document.getElementById("b4ORafter").innerHTML = "It is AFTER noon.";
+    }
+}
+
+//The following function generates a random number between 1 and 10 and determines if it is even or odd
+
+function evenVodd() {
+    const eVo = Math.ceil(Math.random() * 10);
+    if (eVo % 2 === 0) {
+        document.getElementById("evenOdds").innerHTML =  "The number " + eVo + " is EVEN!";
+    }
+    else {
+        document.getElementById("evenOdds").innerHTML = "The number " + eVo + " is ODD!";
+    }
+}
+
 //This is the script where my statements are executed
 window.alert(A); 
