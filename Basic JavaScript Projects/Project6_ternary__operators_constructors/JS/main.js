@@ -39,23 +39,23 @@ function myFunction2() {
     document.getElementById("New_and_This").innerHTML = "Sawyer drives a " + Sawyer.Vehicle_Color + "-colored " + Sawyer.Vehicle_Model + " manufactured by " + Sawyer.Vehicle_Make + " in " + Sawyer.Vehicle_Year;
 }
 
-//The following was written to make nested functions
+//The following was written to make a nested function that lists off perfect squares, starting off with 1.
 
-var begbase = 1;
-const SquareArray = [begbase];
+var begbase = 1;//This variable defines the initial value we use to calculate each successive square number
+const SquareArray = [begbase];//This defines the array in which we will list off each square, starting with the initial value.
 
-function countBySquares(){
-    document.getElementById("Nested_Function").innerHTML = SquareArray;
-    function cbs2a(){
-        function cbs2b (){
+function countBySquares(){//Defines funciton that lists perfect squares
+    document.getElementById("Nested_Function").innerHTML = SquareArray;//Displays the current array containing only the values already contained within it
+    function cbs2a(){//Defines the funciton that returns the value collected in the function enclosed in it (This function is superfluous and could simply include the operations alone but still entertains the nested function exercise)
+        function cbs2b (){//Defines the function that increments the value already defined outside the nested function
             begbase += 1;
         }
         cbs2b();
         return begbase;
     }
-    const currVal = cbs2a();
-    const nexsqre = (currVal)**2;
-    SquareArray.push(nexsqre);
+    const currVal = cbs2a();//Temporarily defines the current value of the variable outside this function as a constant for the runtime of this function.
+    const nexsqre = (currVal)**2;//Defines the next perfect square based on the current base value on this particular runtime of the function
+    SquareArray.push(nexsqre);//Adds the latest perfect square to the running list so that it will be included on the next execution of the funciton.
 }
 
 //This is the script where my statements are executed
