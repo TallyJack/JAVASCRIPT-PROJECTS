@@ -52,5 +52,32 @@ function evenVodd() {
     }
 }
 
+//The following function 
+
+function vowel_count() {
+    const username = document.getElementById("Name").value;
+    const vowels = "aeiouAEIOU";
+    let count = 0;
+
+    for (const char of username) {
+        if (vowels.includes(char)) {
+            count++;
+        }
+    }
+
+    if (count === 1) {
+        document.getElementById("NumVow").innerHTML = "There is " + count + " vowel in the name you submitted."
+    }
+
+    else if (count > 1) {
+        document.getElementById("NumVow").innerHTML = "There are " + count + " vowels in the name you submitted."
+    }
+
+    else {
+        document.getElementById("NumVow").innerHTML = "The name you submitted contains no vowels."
+    }
+    
+}
+
 //This is the script where my statements are executed
 window.alert(A); 
