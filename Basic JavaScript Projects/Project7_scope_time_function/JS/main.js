@@ -52,7 +52,7 @@ function evenVodd() {
     }
 }
 
-//The following function 
+//The following function calculates the number of vowels within a given Name value. as collected in the input field.
 
 function vowel_count() {
     const username = document.getElementById("Name").value;
@@ -77,6 +77,23 @@ function vowel_count() {
         document.getElementById("NumVow").innerHTML = "The name you submitted contains no vowels."
     }
     
+}
+
+//The following function was written as instructed on Step 151
+
+function Time_function() {
+    var Time = new Date().getHours();
+    var Reply;
+    if (Time < 12 == Time > 0) {
+        Reply = "It is morning time!";
+    }
+    else if (Time >= 12 == Time < 18) {
+        Reply = "It is afternoon.";
+    }
+    else {
+        Reply = "It is evening time.";
+    }
+    document.getElementById("Time_of_day").innerHTML = Reply;
 }
 
 //This is the script where my statements are executed
