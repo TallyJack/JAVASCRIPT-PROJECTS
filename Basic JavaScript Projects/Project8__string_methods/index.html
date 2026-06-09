@@ -15,14 +15,33 @@
     <section>
         <h1>-----Section I-----</h1>
         <div>
-            <h3>-----Example-----</h3>
-            <p>Click the button to concatenate the strings below</p>
+            <h3>-----Example Concat-----</h3>
+            <p>Click the button to concatenate the strings below.</p>
             <button onclick="Complete_sent()">Click here</button>
-            <p id="ComboSent"><strong>Result:</strong> [The components of the sentence shown below will be combined into a string and displayed here!]</p>
+            <p id="ComboSent"><strong>Result:</strong> [The components of the sentence shown below will be combined into
+                a string and displayed here!]</p>
             <p>I have </p>
             <p>made this </p>
             <p>into a complete </p>
             <p>sentence.</p>
+        </div>
+        <div>
+            <h3>-----Example Slice-----</h3>
+            <p>Click the button to slice the string below into a list of the food items the string includes.</p>
+            <button onclick="Slice_N_Dice()">Click here</button>
+            <p id="subject_slice">Would you like a slice of pie, cake, or pizza?</p>
+            <ol>
+                <li>
+                    <p id="sliceable1"></p>
+                </li>
+                <li>
+                    <p id="sliceable2"></p>
+                </li>
+                <li>
+                    <p id="sliceable3"></p>
+                </li>
+            </ol>
+
         </div>
     </section>
 

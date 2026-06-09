@@ -16,5 +16,16 @@ function Complete_sent() {
     document.getElementById("ComboSent").innerHTML = "<strong>Result:</strong> " + whole_sentence;
 }
 
+//The following function extracts a section of a string.
+function Slice_N_Dice() {
+    var sentence = document.getElementById("subject_slice").innerHTML;
+    var section_1 = sentence.slice(26, 29);
+    var section_2 = sentence.slice(31, 35);
+    var section_3 = sentence.slice(40, 45);
+    document.getElementById("sliceable1").innerHTML = section_1;
+    document.getElementById("sliceable2").innerHTML = section_2;
+    document.getElementById("sliceable3").innerHTML = section_3;
+}
+
 //This is the script where my statements are executed
 window.alert(A); 
