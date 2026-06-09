@@ -50,5 +50,18 @@ function FullCap(x) {
 
 }
 
+//The following function uses the toString() method to convert number values to strings
+function numsOstr(usingNums) {
+    var X = 6;
+    var Y = 9;
+    const Prefix = "The answer is ";
+    if (usingNums == 1) {
+        document.getElementById("XYresult").innerHTML = Prefix + (X + Y);
+    }
+    else {
+        document.getElementById("XYresult").innerHTML = Prefix + (X.toString() + Y.toString());
+    }
+}
+
 //This is the script where my statements are executed
 window.alert(A); 
