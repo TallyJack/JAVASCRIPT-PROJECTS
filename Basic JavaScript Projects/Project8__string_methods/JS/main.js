@@ -26,6 +26,29 @@ function Slice_N_Dice() {
     document.getElementById("sliceable2").innerHTML = section_2;
     document.getElementById("sliceable3").innerHTML = section_3;
 }
+//The following function allows the user to reset the string used for the capitalization example
+function ResetCap() {
+    const positionStr = "Word Position: ";
+    document.getElementById("CapSent").innerHTML = document.getElementById("CapSent").innerHTML.toLowerCase();
+    document.getElementById("wordPos").innerHTML = positionStr;
+}
+
+//The following function makes use of the search() and toUpperCase() methods to find the position of the word and capitalize it
+function FullCap(x) {
+    const positionStr = "Word Position: ";
+    var currentSent = document.getElementById("CapSent").innerHTML;
+    const positionVal = currentSent.search(x);
+    if (positionVal == -1) {
+        return document.getElementById("wordPos").innerHTML = positionStr + "That word is already Capitalized!";
+    }
+    else {
+        document.getElementById("wordPos").innerHTML = positionStr + positionVal;
+        const wL = x.length;
+        const wSLice = currentSent.slice(positionVal, (positionVal + wL));
+        document.getElementById("CapSent").innerHTML = currentSent.slice(0, positionVal) + wSLice.toUpperCase() + currentSent.slice(positionVal + wL);
+    }
+
+}
 
 //This is the script where my statements are executed
 window.alert(A); 

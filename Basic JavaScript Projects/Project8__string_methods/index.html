@@ -20,10 +20,20 @@
             <button onclick="Complete_sent()">Click here</button>
             <p id="ComboSent"><strong>Result:</strong> [The components of the sentence shown below will be combined into
                 a string and displayed here!]</p>
-            <p>I have </p>
-            <p>made this </p>
-            <p>into a complete </p>
-            <p>sentence.</p>
+            <ol>
+                <li>
+                    <p>I have </p>
+                </li>
+                <li>
+                    <p>made this </p>
+                </li>
+                <li>
+                    <p>into a complete </p>
+                </li>
+                <li>
+                    <p>sentence.</p>
+                </li>
+            </ol>
         </div>
         <div>
             <h3>-----Example Slice-----</h3>
@@ -41,7 +51,20 @@
                     <p id="sliceable3"></p>
                 </li>
             </ol>
-
+        </div>
+        <h1>-----Section II-----</h1>
+        <div>
+            <h3>-----Example Capitalize Searchword-----</h3>
+            <p>Click the button of the word you'd like to capitalize within the string.</p>
+            <div>
+                <button onclick="ResetCap()">Reset</button>
+                <button onclick="FullCap('bill')">bill</button>
+                <button onclick="FullCap('ted')">ted</button>
+                <button onclick="FullCap('time')">time</button>
+                <button onclick="FullCap('travelers')">travelers</button>
+            </div>
+            <p id="CapSent">bill and ted are time travelers.</p>
+            <p id="wordPos">Word Position:</p>
         </div>
     </section>
 
