@@ -29,6 +29,9 @@ function globVloc4() {
     document.getElementById("gvlAnswer4").innerHTML = GlobalX + LocalY
 }
 
+//This is the console.log() method being executed as requested to debug the error returned by the undefined local variable
+console.log(LocalY);
+
 //The following function(s) use the Date().getHours() method to showcase conditional statements
 
 function amVpm() {
@@ -95,6 +98,7 @@ function Time_function() {
     }
     document.getElementById("Time_of_day").innerHTML = Reply;
 }
+
 
 //This is the script where my statements are executed
 window.alert(A); 
