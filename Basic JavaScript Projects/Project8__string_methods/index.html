@@ -74,7 +74,21 @@
                 <button onclick="numsOstr(1)">Treat as Numbers</button>
                 <button onclick="numsOstr(0)">Treat as Strings</button>
             </div>
-            <p id="XYresult"></p>
+            <p id="XYresult">[The answer will display here!]</p>
+        </div>
+        <div>
+            <h3>-----Precision Method-----</h3>
+            <p>Find area of circle after providing a radius and a level of precision.</p>
+            <form>
+                <label for="rad_input">Select a Radius between 1 and 10:</label>
+                <input id="rad_input" type="number" min="1" max="10" placeholder="1-10">
+            </form>
+            <div>
+                <button onclick="cirArea(1)">1 Digit</button>
+                <button onclick="cirArea(5)">5 Digits</button>
+                <button onclick="cirArea(10)">10 Digits</button>
+            </div>
+            <p id="PrecEx1">[The answer will display here!]</p>
         </div>
         
     </section>

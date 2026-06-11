@@ -63,5 +63,25 @@ function numsOstr(usingNums) {
     }
 }
 
+//The following function uses the toPrecision() method to calculate the area of a circle with the selected level of precision.
+function cirArea(X) {
+    const rad_answer = document.getElementById("rad_input");
+    rad_answer.removeAttribute("style", "background-color");
+
+    if (1 <= rad_answer.value && rad_answer.value <= 10) {
+        const rawArea = Math.PI * (rad_answer.value**2)
+        document.getElementById("PrecEx1").innerHTML = rawArea.toPrecision(X);
+    }
+    else if (rad_answer.value === "") {
+        document.getElementById("PrecEx1").innerHTML = "Please select a radius!";
+        rad_answer.style.borderColor = "red"
+    }
+    else {
+        document.getElementById("PrecEx1").innerHTML = "The radius you have selected is invalid.";
+        rad_answer.style.borderColor = "red"
+    }
+    return;
+}
+
 //This is the script where my statements are executed
 window.alert(A); 
