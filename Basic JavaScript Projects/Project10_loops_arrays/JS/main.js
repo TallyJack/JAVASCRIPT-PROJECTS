@@ -6,6 +6,7 @@ var A = "Website Reset";
 var coinRuns = 0; //This represents the number of times that the coin flip function has run.
 var head_Count = 0;
 var tail_Count = 0;
+var h_tRatio;
 var Instruments = ["Guitar", "Drums", "Piano", "Bass", "Violin", "Trumpet", "Flute"];
 var I;
 
@@ -25,7 +26,8 @@ function Call_Loop() {
     }
     tail_Count++;
     N += E + X + ". Tails!";
-    var Y = "<strong>Attempts: " + coinRuns + E + "Head Count: " + head_Count + E + "Tails Count: " + tail_Count + E + "Heads/Tails Ratio: " + (head_Count / tail_Count).toPrecision(3) + "</strong>";
+    h_tRatio = Number((head_Count / tail_Count).toPrecision(3));
+    var Y = "<strong>Attempts: " + coinRuns + E + "Head Count: " + head_Count + E + "Tails Count: " + tail_Count + E + "Heads/Tails Ratio: " + h_tRatio + "</strong>";
     document.getElementById("Loop").innerHTML = Y + N;
 
 }
@@ -41,6 +43,7 @@ function for_Loop() {
 }
 
 //The following function creates an array of dates, beginning with today's date, and extending into the past a number of days specified as an argument.
+//NOTE: This makes use of FOR loops, Arrays, and hte Let Keyword
 function array_Function(d) {
     var today = new Date();
     var Days_Ago = [];
@@ -51,10 +54,11 @@ function array_Function(d) {
         Days_Past += Days_Ago[i] + " was " + i + " day(s) ago!" + E;
     }
     document.getElementById("daysAgo").innerHTML = Days_Past;
-}
+};
 
-//The following funciton ...
+//The following funciton displays the properties of the Hero
 function constant_function() {
+    document.getElementById("Constant").innerHTML = "";
     const Hero = {
         Alias: "Invincible",
         Gender: "Male",
@@ -66,6 +70,22 @@ function constant_function() {
     for (const [x, y] of Object.entries(Hero)) {
         document.getElementById("Constant").innerHTML += x + ": " + y + E;
     };
+};
+
+//The following function makes use of the LET Keyword
+function Lettuce(key, value) {
+    const setup = "The global variable, '" + key + ",' represents a value of " + value + "."
+    document.getElementById("LetsDance").innerHTML = setup;
+    {
+        let value = -1000000;
+        const build = E + "Let's briefly use the 'let' keyword to let '" + key + "' represent a value of " + value + " within the scope of this block."
+        document.getElementById("LetsDance").innerHTML += build;
+        const inside = E + "If I now add 5000 to that value INSIDE the 'let' block, we get a total of " + (value + 5000) + "."
+        document.getElementById("LetsDance").innerHTML += inside;
+    }
+    const outside = E + "However, if I now add 5000 to that value OUTSIDE the 'let' block, we get a total of " + (value + 5000) + "."
+    document.getElementById("LetsDance").innerHTML += outside;
+
 }
 
 //This is the script where my statements are executed
