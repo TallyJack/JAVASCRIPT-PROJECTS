@@ -45,16 +45,9 @@ function array_Function(d) {
     var today = new Date();
     var Days_Ago = [];
     Days_Ago[0] = today.toDateString();
-    Days_Ago[1] = new Date(new Date().setDate(today.getDate() - 1)).toDateString();
-    Days_Ago[2] = new Date(new Date().setDate(today.getDate() - 2)).toDateString();
-    Days_Ago[3] = new Date(new Date().setDate(today.getDate() - 3)).toDateString();
-    Days_Ago[4] = new Date(new Date().setDate(today.getDate() - 4)).toDateString();
-    Days_Ago[5] = new Date(new Date().setDate(today.getDate() - 5)).toDateString();
-    Days_Ago[6] = new Date(new Date().setDate(today.getDate() - 6)).toDateString();
-    Days_Ago[7] = new Date(new Date().setDate(today.getDate() - 7)).toDateString();
     var Days_Past = "Today's Date is " + Days_Ago[0] +"!" + E;
     for (let i = 1; i <= d; i++) {
-        
+        Days_Ago[i] = new Date(new Date().setDate(today.getDate() - i)).toDateString();
         Days_Past += Days_Ago[i] + " was " + i + " day(s) ago!" + E;
     }
     document.getElementById("daysAgo").innerHTML = Days_Past;
