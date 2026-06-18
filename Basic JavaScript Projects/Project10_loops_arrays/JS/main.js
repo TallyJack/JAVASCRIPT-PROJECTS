@@ -25,7 +25,7 @@ function Call_Loop() {
     }
     tail_Count++;
     N += E + X + ". Tails!";
-    var Y = "<strong>Attempts: " + coinRuns + E + "Head Count: " + head_Count + E + "Tails Count: " + tail_Count + E + "Heads/Tails Ratio: " + (head_Count/tail_Count).toPrecision(3) + "</strong>";
+    var Y = "<strong>Attempts: " + coinRuns + E + "Head Count: " + head_Count + E + "Tails Count: " + tail_Count + E + "Heads/Tails Ratio: " + (head_Count / tail_Count).toPrecision(3) + "</strong>";
     document.getElementById("Loop").innerHTML = Y + N;
 
 }
@@ -34,24 +34,39 @@ function Call_Loop() {
 function for_Loop() {
     var content1 = "";
     for (I = 0; I < Instruments.length; I++) {
-        
+
         content1 += (I + 1) + ". " + Instruments[I] + E;
     }
     document.getElementById("List_of_Instruments").innerHTML = content1;
 }
 
-//The following function creates an array and calls one of its objects.
+//The following function creates an array of dates, beginning with today's date, and extending into the past a number of days specified as an argument.
 function array_Function(d) {
     var today = new Date();
     var Days_Ago = [];
     Days_Ago[0] = today.toDateString();
-    var Days_Past = "Today's Date is " + Days_Ago[0] +"!" + E;
+    var Days_Past = "Today's Date is " + Days_Ago[0] + "!" + E;
     for (let i = 1; i <= d; i++) {
         Days_Ago[i] = new Date(new Date().setDate(today.getDate() - i)).toDateString();
         Days_Past += Days_Ago[i] + " was " + i + " day(s) ago!" + E;
     }
     document.getElementById("daysAgo").innerHTML = Days_Past;
-} 
+}
+
+//The following funciton ...
+function constant_function() {
+    const Hero = {
+        Alias: "Invincible",
+        Gender: "Male",
+        Name: "Mark Grayson",
+        Power: "Strength and Flight",
+        Age: 19,
+        Colors: "Blue and Yellow"
+    };
+    for (const [x, y] of Object.entries(Hero)) {
+        document.getElementById("Constant").innerHTML += x + ": " + y + E;
+    };
+}
 
 //This is the script where my statements are executed
 window.alert(A); 
