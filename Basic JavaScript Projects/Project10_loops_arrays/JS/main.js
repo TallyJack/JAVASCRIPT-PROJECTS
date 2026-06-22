@@ -59,7 +59,7 @@ function array_Function(d) {
 //The following funciton displays the properties of the Hero
 function constant_function() {
     document.getElementById("Constant").innerHTML = "";
-    const Hero = {
+    let Hero = {
         Alias: "Invincible",
         Gender: "Male",
         Name: "Mark Grayson",
