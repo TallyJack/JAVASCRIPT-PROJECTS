@@ -2,7 +2,27 @@
 var E = "<br>";
 var A = "Website Reset";
 
-//These are the VARS that I'm creating for this project
+//These are the variables that I'm creating for this project
+const C1 = document.getElementById("sect2canva");//Canvas in Section 2
+
+const C1_CrissCross = C1.getContext("2d"); //Forms an X and a cross over the canvas
+
+//The 4 below form the diagonal
+C1_CrissCross.moveTo(0,0);
+C1_CrissCross.lineTo(500, 250);
+C1_CrissCross.moveTo(500, 0);
+C1_CrissCross.lineTo(0, 250);
+
+//The 4 below form the cross
+C1_CrissCross.moveTo(250, 0);
+C1_CrissCross.lineTo(250, 250);
+C1_CrissCross.moveTo(0, 125);
+C1_CrissCross.lineTo(500, 125);
+
+//These color, thicken, and execute the stroke
+C1_CrissCross.strokeStyle = "red";
+C1_CrissCross.lineWidth = 10;
+C1_CrissCross.stroke();
 
 //These are the functions that I'm creating for this project
 function Hero_Function() {
