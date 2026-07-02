@@ -13,8 +13,10 @@
 
 <body id="body">
     <!--This container is needed to overlay our canvas over our table.-->
-    <h1>Tic Tac Toe - 2026</h1>
+    <h1 onclick="clickCounter()">Tic Tac Toe - 2026</h1>
+    
     <div class="center-container">
+        <p id="clickTotal" style="text-align: right;"></p>
         <!--NOTE: Canvas width and height must be within the element.-->
         <canvas id="win-lines" width="608" height="608"></canvas>
         <table>
@@ -35,6 +37,13 @@
             </tr>
         </table>
     </div>
+    <script>
+    //The following inline script tracks the number of times that the user has clicked the Heading
+    var clix = 1;
+    const clickLog = "Number of Clicks on Heading: ";
+    const clickCounter = () => document.getElementById("clickTotal").innerHTML = clickLog + clix++;
+    document.getElementById("clickTotal").innerHTML = clickLog + (clix-1);
+    </script>
 </body>
 
 </html>
