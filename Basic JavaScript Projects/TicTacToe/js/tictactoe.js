@@ -125,3 +125,20 @@ function checkWinConditions() {
         if (a === true && b === true && c === true) { return true; }
     }
 }
+
+//This function makes our body element temporarily unclickable.
+function disableClick() {
+    //This makes our body unclickable.
+    body.style.pointerEvents = 'none';
+    //This makes our body clickable again after 1 second.
+    setTimeout(function () { body.style.pointerEvents = 'auto'; }, 1000);
+}
+
+//This function takes a string parameter of the path youset earlier for
+//placement sound('./media/place.mp3')
+function audio(audioURL) {
+    //We create a new audio object and we pass the path as a parameter.
+    let audio = new Audio(audioURL);
+    //Play method plays our audio sound.
+    audio.play();
+}
