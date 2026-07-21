@@ -25,25 +25,22 @@ $(document).ready(function () {
             $("#titleOne").show(1000);
             $("#titleTwo").show(1500);
             $("#titleThree").show(2000);
-        }
-    });
+        },
 
-    //Triggers the images to slide up and hide each title one after the other
-    //when the user's mouse leaves the div area with the #classicCars ID
-    $("#classicCars").on({
+       //Triggers the images to slide up and hide each title one after the other
+       //when the user's mouse leaves the div area with the #classicCars ID
         mouseleave: function () {
             $("#titleOne").hide(2000);
             $("#titleTwo").hide(1500);
             $("#titleThree").hide(1000);
         }
+
     });
 
     //Creates a toggle effect on each FAQ question by checking each element's sibling 
     //so they don't all display when one question is clicked
     $('div.question').on('click', function () {
-        $(this).next()
-            .slideToggle('slow')
-            .siblings('div.answer');
+        $(this).next().slideToggle('slow');
     });
 
 })
