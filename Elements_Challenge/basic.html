@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--HEAD-->
+
+<head>
+    <title>ELEMENTS CHALLENGE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<!--BODY-->
+
+<body>
+    <div>
+        <h1 id="demo" onclick="showURL()">Click here for URL</h1>
+
+        <script>
+            let url = document.URL;
+
+            showURL = function () {
+                document.getElementById("demo").innerHTML = url;
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>
