@@ -5,6 +5,6 @@ function loadDoc() {
             document.getElementById("content").innerHTML = this.responseText;
         }
     };
-    xhttp.open("GET", "ajax_info.txt", true);
+    xhttp.open("GET", "content.html", true);
     xhttp.send();
 }
