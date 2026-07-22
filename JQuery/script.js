@@ -27,8 +27,8 @@ $(document).ready(function () {
             $("#titleThree").show(2000);
         },
 
-       //Triggers the images to slide up and hide each title one after the other
-       //when the user's mouse leaves the div area with the #classicCars ID
+        //Triggers the images to slide up and hide each title one after the other
+        //when the user's mouse leaves the div area with the #classicCars ID
         mouseleave: function () {
             $("#titleOne").hide(2000);
             $("#titleTwo").hide(1500);
@@ -41,6 +41,12 @@ $(document).ready(function () {
     //so they don't all display when one question is clicked
     $('div.question').on('click', function () {
         $(this).next().slideToggle('slow');
+    });
+
+    // Per Step 361 - Makes use iof JQuery event listed on Basics page and effect listed on Introduction Effects page.
+    $("img").on("click", function () {
+        $(this).toggleClass("greenBorder");
+        console.log("You clicked an image");
     });
 
 })

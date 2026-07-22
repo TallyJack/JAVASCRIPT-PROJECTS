@@ -101,3 +101,7 @@ img {
     display: none; /*Hides FAQ answer until the user clicks the FAQ question*/
     padding: 40px 20px;
 }
+
+.greenBorder {
+    border: 2px solid green;
+}
